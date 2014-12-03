@@ -10,7 +10,8 @@ access_token = os.environ.get('ROSENBOT_ACCESS_TOKEN')
 access_token_secret = os.environ.get('ROSENBOT_ACCESS_TOKEN_SECRET')
 
 # Init
-r = redis.StrictRedis(host='localhost', port=6379, db=0)
+redis_url = os.getenv('ROSENBOT_REDISTOGO_URL', 'redis://localhost:6379')
+r = redis.from_url(redis_url)
 
 api = twitter.Api(consumer_key=consumer_key,
                       consumer_secret=consumer_secret,
