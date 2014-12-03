@@ -44,5 +44,6 @@ while True:
         # Post tweet and save it to DB
         status = api.PostUpdate(tweet_sentence)
         r.sadd('past_tweets', tweet_sentence)
+        r.save()
 
         break
