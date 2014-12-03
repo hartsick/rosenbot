@@ -26,7 +26,7 @@ api = twitter.Api(consumer_key=consumer_key,
                       access_token_secret=access_token_secret)
 
 # Read given text & split into sentences
-with open('text-file.txt.example', 'r') as f:
+with open('text-file.txt', 'r') as f:
     read_data = f.read().decode('utf8').replace("\n", " ")
 sentences = sent_detector.tokenize(read_data)
 
