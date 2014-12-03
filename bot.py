@@ -41,7 +41,7 @@ while True:
     if r.sismember('past_tweets', tweet) is False:
 
         # Post tweet and save it to DB
-        status = api.PostUpdate(tweet)
+        api.PostUpdate(tweet)
         r.sadd('past_tweets', tweet)
 
         break
