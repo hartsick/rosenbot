@@ -1,3 +1,4 @@
+nltk==3.0.0
 oauthlib==0.7.2
 python-twitter==2.0
 redis==2.10.3
